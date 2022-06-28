@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/index.css" >
+    <title>Carrinho de Compras</title>
+    <script src="itens.js" defer></script>
+    <script src="carrinho.js" defer></script>
+    
+  
+    
+</head>
+<body>
+    <div class="container">
+        <div class="campo-do-carrinho">
+            <div class="carrinho-itens">
+            </div>
+            <div id="valor-total-campo">
+               Quantidade de itens: <span class ="qtd-item">0</span><br>
+               <!--Valor Total: <span class ="valor-total">0</span>-->
+               Valor-total: <span class ="compara">0</span>
+            </div>
+            <button>Finalizar compra</button>
+            
+        </div>
+        <div class="container-produtos" > 
+            <div class="container-produto">
+              
+                <p class="nome_produto" id="nome_produto1"></p>
+                <img class="img-produto" id="img_produto1"></img>
+                <p class="descricao_produto" id="descricao1"></p>
+                <p class="preco_produto" id="preco_produto1"></p>
+                <a  class="addCart" href="#"  >Adicionar ao carrinho</a>
+               
+            </div>
+            <div class="container-produto">
+              
+                <p class="nome_produto" id="nome_produto2"></p>
+                <img class="img-produto" id="img_produto2"></img>
+                <p class="descricao_produto" id="descricao2"></p>
+                <p class="preco_produto" id="preco_produto2">77</p>
+                <a  class="addCart" href="#">Adicionar ao carrinho</a>
+               
+            </div>
+            
+        </div>
+    </div>    
+   
+    
+    
+</body>
+</html>

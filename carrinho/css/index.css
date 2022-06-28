@@ -1,0 +1,30 @@
+body{
+    display: inline;
+    background-color: #ffffff;
+}
+.container{
+    margin: 12px;
+    position: relative;
+}
+.campo-do-carrinho{
+    position: absolute;
+    right: 110px;
+    margin: 10px;
+}
+#valor-total {
+    margin: 1px;
+}
+.img-produto{
+    width: 150px;
+    height: 150px;
+}
+.container-produtos{
+    width: 300px;
+    height: 400px;
+    display: inline-block;
+  
+  
+}
+.container-produto{
+    display: inline ;
+}
