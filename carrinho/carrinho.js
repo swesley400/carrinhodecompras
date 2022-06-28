@@ -27,8 +27,29 @@ var adicionaCarrinho= document.querySelectorAll('.addCart')
 for(let i = 0; i < adicionaCarrinho.length; i++){
     adicionaCarrinho[i].addEventListener('click',()=>{
         numeroDoCarinho(produtoJson[i])
-        console.log(produtoJson[i])
-       
+        /*console.log(produtoJson[i])*/
+        function montaCar(){
+
+        var esp=document.createElement("span");
+        var espbr=document.createElement("br");
+        document.getElementById("carrinho-itens").appendChild(esp);
+        document.getElementById("carrinho-itens").appendChild(espbr)
+        esp.innerHTML= produtoJson[i].name + " " + produtoJson[i].price;
+            
+        
+           
+        
+        
+        } 
+        montaCar()    
+        
+        
+        
+          
+        
+        
+        
+      
     })
 }
 
@@ -75,9 +96,10 @@ function numeroDoCarinho(produtoJson){
     
     
 }
+
 carregaNumeroDoCar()
         
-        
+
 
 
        
