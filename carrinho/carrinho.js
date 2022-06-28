@@ -28,6 +28,7 @@ for(let i = 0; i < adicionaCarrinho.length; i++){
     adicionaCarrinho[i].addEventListener('click',()=>{
         numeroDoCarinho(produtoJson[i])
         /*console.log(produtoJson[i])*/
+        /*Cria Elemento e insere Json no carrinho*/ 
         function montaCar(){
 
         var esp=document.createElement("span");
