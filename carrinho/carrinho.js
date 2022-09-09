@@ -9,6 +9,12 @@ let img_produto2 = document.querySelector('#img_produto2');
 let precoDoItem2 = document.querySelector('#preco_produto2');
 let adicionaDescricao = document.querySelector('.carrinho-itens')
 
+let campoCar = document.querySelector('.carrinho-itens')
+
+campoCar.innerHTML = localStorage.getItem('Car')
+
+ 
+
 function adicionaHtml(){
     name_produto1.innerHTML = produtoJson[0].name;
     descricao1.innerHTML = produtoJson[0].description; 
@@ -30,29 +36,9 @@ for(let i = 0; i < adicionaCarrinho.length; i++){
         /*console.log(produtoJson[i])*/
         /*Cria Elemento e insere Json no carrinho*/ 
          
-        function MontaCar(descricao, preco, value, value2){
-
-            this.descricao = descricao;
-            this.preco = preco;
-            this.teste = {};
-            this.teste = function(){
-                this.initial = JSON.stringify({Produto: this.descricao, Preco: this.preco})
-                localStorage.getItem('Car') == null ? this.teste =this.initial : this.teste = localStorage.getItem('Car') +','+ this.initial
-                localStorage.setItem('Car', this.teste )
-                console.log("Carrinho esta aqui", this.teste)
-                this.transformaemarray = this.teste.split(",")
-                for (let momento  = 0 ; momento < this.transformaemarray.length ; momento++ ){
-                    
-                    console.log(this.transformaemarray[momento])
-                    
-                }
-                
-                console.log("Passei aqui")
-            }
-
-        }
+       
         const produtoInsere = new MontaCar(produtoJson[i].name, produtoJson[i].price, null, null)
-        produtoInsere.teste()
+        produtoInsere.insereNoCar()
         
         
           
@@ -61,6 +47,24 @@ for(let i = 0; i < adicionaCarrinho.length; i++){
         
       
     })
+}
+
+function MontaCar(descricao, preco, value, value2){
+
+    this.descricao = descricao;
+    this.preco = preco;
+    this.teste = {};
+    this.insereNoCar = function(){
+        
+        this.initial = `<div class='Conteudo-car'>${this.descricao}</div>`+`<div class='Conteudo-car'>${this.preco}</div>`
+        localStorage.getItem('Car') == null ? this.carragaDoStorange = this.initial : this.carragaDoStorange = localStorage.getItem('Car') + this.initial
+        localStorage.setItem('Car', this.carragaDoStorange )
+        const carregaCarNaDiv = localStorage.getItem('Car')
+        campoCar.innerHTML = carregaCarNaDiv
+
+    
+    }
+
 }
 
 function carregaNumeroDoCar(){
@@ -73,6 +77,7 @@ function carregaNumeroDoCar(){
     if(total){
         document.querySelector('.compara').textContent = total
     }
+    
 }
 
 function numeroDoCarinho(produtoJson){
@@ -106,5 +111,5 @@ function numeroDoCarinho(produtoJson){
     
     
 }
-
 carregaNumeroDoCar()
+
