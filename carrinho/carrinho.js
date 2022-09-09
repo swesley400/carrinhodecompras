@@ -29,21 +29,19 @@ for(let i = 0; i < adicionaCarrinho.length; i++){
         numeroDoCarinho(produtoJson[i])
         /*console.log(produtoJson[i])*/
         /*Cria Elemento e insere Json no carrinho*/ 
-        function montaCar(){
+         
+        function MontaCar(descricao, preco, value, value2){
 
-        var esp=document.createElement("span");
-        var espbr=document.createElement("br");
-        document.getElementById("carrinho-itens").appendChild(esp);
-        document.getElementById("carrinho-itens").appendChild(espbr)
-        esp.innerHTML= produtoJson[i].name + " " + produtoJson[i].price;
-            
-        
-           
-        
-        
-        } 
-        montaCar()    
-        
+            this.descricao = descricao;
+            this.preco = preco;
+            this.teste = function(){
+                this.initial = {item: this.descricao, preco: this.preco}
+                console.log("Carrinho esta aqui", this.initial)
+            }
+
+        }
+        const produtoInsere = new MontaCar(produtoJson[i].name, produtoJson[i].price, null, null)
+        produtoInsere.teste()
         
         
           
