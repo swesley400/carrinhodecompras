@@ -34,9 +34,20 @@ for(let i = 0; i < adicionaCarrinho.length; i++){
 
             this.descricao = descricao;
             this.preco = preco;
+            this.teste = {};
             this.teste = function(){
-                this.initial = {item: this.descricao, preco: this.preco}
-                console.log("Carrinho esta aqui", this.initial)
+                this.initial = JSON.stringify({Produto: this.descricao, Preco: this.preco})
+                localStorage.getItem('Car') == null ? this.teste =this.initial : this.teste = localStorage.getItem('Car') +','+ this.initial
+                localStorage.setItem('Car', this.teste )
+                console.log("Carrinho esta aqui", this.teste)
+                this.transformaemarray = this.teste.split(",")
+                for (let momento  = 0 ; momento < this.transformaemarray.length ; momento++ ){
+                    
+                    console.log(this.transformaemarray[momento])
+                    
+                }
+                
+                console.log("Passei aqui")
             }
 
         }
