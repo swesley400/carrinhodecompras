@@ -59,8 +59,7 @@ function MontaCar(descricao, preco, value, value2){
         this.initial = `<div class='Conteudo-car'>${this.descricao}</div>`+`<div class='Conteudo-car'>${this.preco}</div>`
         localStorage.getItem('Car') == null ? this.carragaDoStorange = this.initial : this.carragaDoStorange = localStorage.getItem('Car') + this.initial
         localStorage.setItem('Car', this.carragaDoStorange )
-        const carregaCarNaDiv = localStorage.getItem('Car')
-        campoCar.innerHTML = carregaCarNaDiv
+        campoCar.innerHTML = localStorage.getItem('Car')
 
     
     }
@@ -99,13 +98,13 @@ function numeroDoCarinho(produtoJson){
         localStorage.setItem('Total', test )
         localStorage.setItem('NumerodoCarrinho', numeroProdutos + 1)
         document.querySelector('.qtd-item').textContent = numeroProdutos + 1
-        document.querySelector('.compara').textContent = test
+        document.querySelector('.valor-total').textContent = test
     }
     else{
         localStorage.setItem('Total', test)
         localStorage.setItem('NumerodoCarrinho', 1)
         document.querySelector('.qtd-item').textContent = 1
-        document.querySelector('.compara').textContent = test
+        document.querySelector('.valor-total').textContent = test
         
     }
     
