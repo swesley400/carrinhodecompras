@@ -13,8 +13,6 @@ let campoCar = document.querySelector('.carrinho-itens')
 
 campoCar.innerHTML = localStorage.getItem('Car')
 
- 
-
 function adicionaHtml(){
     name_produto1.innerHTML = produtoJson[0].name;
     descricao1.innerHTML = produtoJson[0].description; 
@@ -27,7 +25,6 @@ function adicionaHtml(){
 }
 adicionaHtml()
 
-
 var adicionaCarrinho= document.querySelectorAll('.addCart')    
 
 for(let i = 0; i < adicionaCarrinho.length; i++){
@@ -35,33 +32,21 @@ for(let i = 0; i < adicionaCarrinho.length; i++){
         numeroDoCarinho(produtoJson[i])
         /*console.log(produtoJson[i])*/
         /*Cria Elemento e insere Json no carrinho*/ 
-         
-       
         const produtoInsere = new MontaCar(produtoJson[i].name, produtoJson[i].price, null, null)
         produtoInsere.insereNoCar()
-        
-        
-          
-        
-        
-        
       
     })
 }
 
 function MontaCar(descricao, preco, value, value2){
-
     this.descricao = descricao;
     this.preco = preco;
     this.teste = {};
     this.insereNoCar = function(){
-        
         this.initial = `<div class='Conteudo-car'>${this.descricao}</div>`+`<div class='Conteudo-car'>${this.preco}</div>`
         localStorage.getItem('Car') == null ? this.carragaDoStorange = this.initial : this.carragaDoStorange = localStorage.getItem('Car') + this.initial
         localStorage.setItem('Car', this.carragaDoStorange )
         campoCar.innerHTML = localStorage.getItem('Car')
-
-    
     }
 
 }
@@ -85,7 +70,7 @@ function numeroDoCarinho(produtoJson){
         resultado = Number(num1) + Number(num2)
         return resultado
     }
-    console.log(extraiValor(total.textContent, produtoJson.price))
+    extraiValor(total.textContent, produtoJson.price)
     total.innerHTML = resultado
     
     let test = localStorage.getItem('NumerodoCarrinho')
@@ -94,7 +79,6 @@ function numeroDoCarinho(produtoJson){
     test = parseInt(total.textContent)
     
     if(numeroProdutos){
-        
         localStorage.setItem('Total', test )
         localStorage.setItem('NumerodoCarrinho', numeroProdutos + 1)
         document.querySelector('.qtd-item').textContent = numeroProdutos + 1
@@ -105,7 +89,6 @@ function numeroDoCarinho(produtoJson){
         localStorage.setItem('NumerodoCarrinho', 1)
         document.querySelector('.qtd-item').textContent = 1
         document.querySelector('.valor-total').textContent = test
-        
     }
     
     
