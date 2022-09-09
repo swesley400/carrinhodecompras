@@ -97,25 +97,3 @@ function numeroDoCarinho(produtoJson){
 }
 
 carregaNumeroDoCar()
-        
-
-
-
-       
-
-
-
-       
- 
- 
-
-
-
-
-
-
-
-
-
-
-
