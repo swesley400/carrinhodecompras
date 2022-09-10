@@ -17,11 +17,11 @@ function adicionaHtml(){
     name_produto1.innerHTML = produtoJson[0].name;
     descricao1.innerHTML = produtoJson[0].description; 
     img_produto1.innerHTML = img_produto1.src = produtoJson[0].img
-    precoDoItem1.innerHTML = produtoJson[0].price   
+    precoDoItem1.innerHTML =`R$${produtoJson[0].price}, 00`
     name_produto2.innerHTML = produtoJson[1].name;
     descricao12.innerHTML = produtoJson[1].description; 
     img_produto2.innerHTML = img_produto2.src = produtoJson[1].img
-    precoDoItem2.innerHTML = produtoJson[1].price  
+    precoDoItem2.innerHTML = `R$${produtoJson[1].price}, 00`  
 }
 adicionaHtml()
 
@@ -73,22 +73,22 @@ function numeroDoCarinho(produtoJson){
     extraiValor(total.textContent, produtoJson.price)
     total.innerHTML = resultado
     
-    let test = localStorage.getItem('NumerodoCarrinho')
+    let itensCarNumeros = localStorage.getItem('NumerodoCarrinho')
     let numeroProdutos = localStorage.getItem('NumerodoCarrinho')
     numeroProdutos = parseInt(numeroProdutos)
-    test = parseInt(total.textContent)
+    itensCarNumeros = parseInt(total.textContent)
     
     if(numeroProdutos){
-        localStorage.setItem('Total', test )
+        localStorage.setItem('Total', itensCarNumeros )
         localStorage.setItem('NumerodoCarrinho', numeroProdutos + 1)
         document.querySelector('.qtd-item').textContent = numeroProdutos + 1
-        document.querySelector('.valor-total').textContent = test
+        document.querySelector('.valor-total').textContent = itensCarNumeros
     }
     else{
-        localStorage.setItem('Total', test)
+        localStorage.setItem('Total', itensCarNumeros)
         localStorage.setItem('NumerodoCarrinho', 1)
         document.querySelector('.qtd-item').textContent = 1
-        document.querySelector('.valor-total').textContent = test
+        document.querySelector('.valor-total').textContent = itensCarNumeros
     }
     
     

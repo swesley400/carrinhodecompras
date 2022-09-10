@@ -5,14 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/index.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Old+Standard+TT&family=Source+Sans+Pro:wght@200;300&display=swap" rel="stylesheet">
     <title>Carrinho de Compras</title>
     <script src="./js/itens.js" defer></script>
     <script src="./js/carrinho.js" defer></script>
+    <script src="./js/slide.js" defer></script>
     
   
     
 </head>
-<body>
+<body  onLoad="slide1()">
     <header>
         <h1>Nordic Store</h1>
         <nav>
@@ -24,7 +28,7 @@
         </nav>
     </header>
     <div class="container-banner"> 
-        <img src="./imgs/banner_eletronicos.png" alt="banner">
+        <img class="img_banner" alt="banner">
     </div>
     <div class="container">
         <div class="campo-do-carrinho">
@@ -46,7 +50,9 @@
                 <img class="img-produto" id="img_produto1"></img>
                 <p class="descricao_produto" id="descricao1"></p>
                 <p class="preco_produto" id="preco_produto1"></p>
-                <a  class="addCart" href="#"  >Adicionar ao carrinho</a>
+                <div class=".buttons">
+                <button  class="addCart" >Adicionar ao carrinho</button>
+                </div>
                
             </div>
             <div class="container-produto">
@@ -54,8 +60,10 @@
                 <p class="nome_produto" id="nome_produto2"></p>
                 <img class="img-produto" id="img_produto2"></img>
                 <p class="descricao_produto" id="descricao2"></p>
-                <p class="preco_produto" id="preco_produto2">77</p>
-                <a  class="addCart" href="#">Adicionar ao carrinho</a>
+                <p class="preco_produto" id="preco_produto2"></p>
+                <div class=".buttons">
+                    <button  class="addCart">Adicionar ao carrinho</button>
+                </div>
                
             </div>    
         </div>
