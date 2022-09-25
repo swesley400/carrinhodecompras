@@ -54,9 +54,31 @@ header ul li{
     justify-content: center  ;
 }
 .campo-do-carrinho{
+    background-color: #dbd4d4;
+    font-weight: bolder;
+    padding: 10px;
+    width: 200px;
+    height: auto;
     position: absolute;
+    font-size: 12px;
     right: 110px;
     margin: 10px;
+  
+}  
+.campo-do-carrinho : hover{
+    display: block;
+
+}
+.icon-car{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+}
+.icon-car:hover{
+    cursor: pointer;
+
 }
 #valor-total {
     margin: 1px;
