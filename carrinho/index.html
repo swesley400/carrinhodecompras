@@ -20,7 +20,8 @@
 <body  onLoad="slide1()">
     <header>
         <h1>Nordic Store</h1>
-        <nav>
+        <nav class="menu-item">
+            <img class="menu-ico" src="./imgs/menu-lateral.svg" alt="menu-ico">
             <ul>
                 <li>Home</li>
                 <li>Sobre</li>
@@ -40,9 +41,9 @@
             <div id="valor-total-campo">
                 <!-- Carrega quantidades de itens e valor total do carrinho -->
                Quantidade de itens: <span class ="qtd-item">0</span><br>
-               Valor total: <span class ="valor-total">0</span>
+               Valor total: <span>R$ <span class ="valor-total">0</span>,00</span>
             </div>
-            <button>Finalizar compra</button>
+            <button class="finalizar-compra">Finalizar compra</button>
             
         </div>
         <div class="container-produtos" > 
@@ -51,9 +52,10 @@
                 <p class="nome_produto" id="nome_produto1"></p>
                 <img class="img-produto" id="img_produto1"></img>
                 <p class="descricao_produto" id="descricao1"></p>
-                <p class="preco_produto" id="preco_produto1"></p>
+                <div class="preco-e-tamanho"><span class="preco_produto" id="preco_produto1"></span><div id="tamanho1" class="tamanho"><select id="tamanhoInserido"></select></div></div>
+                
                 <div class=".buttons">
-                <button  class="addCart" >Adicionar ao carrinho</button>
+                <button  class="addCart">Adicionar ao carrinho</button>
                 </div>
                
             </div>
@@ -62,7 +64,7 @@
                 <p class="nome_produto" id="nome_produto2"></p>
                 <img class="img-produto" id="img_produto2"></img>
                 <p class="descricao_produto" id="descricao2"></p>
-                <p class="preco_produto" id="preco_produto2"></p>
+                <div class="preco-e-tamanho"><span class="preco_produto" id="preco_produto2"></span><div id="tamanho1" class="tamanho"><select id="tamanhoInserido2"></select></div></div>
                 <div class=".buttons">
                     <button  class="addCart">Adicionar ao carrinho</button>
                 </div>

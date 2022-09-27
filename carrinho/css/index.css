@@ -30,6 +30,15 @@ header ul li{
     margin: 15px;
     display: inline;
 }
+
+.menu-ico{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    display: none;
+}
 .container-banner{
     width: 100%;
     height: 300px;
@@ -54,29 +63,58 @@ header ul li{
     justify-content: center  ;
 }
 .campo-do-carrinho{
-    background-color: #dbd4d4;
+    background: #ffffff;
+    box-shadow: rgb(0 0 0 / 25%) 0px 3px 10px -5px;
     font-weight: bolder;
     padding: 10px;
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     height: auto;
     position: absolute;
     font-size: 12px;
-    right: 110px;
+    right: 25px;
     margin: 10px;
+    border-radius: 8px;
   
-}  
-.campo-do-carrinho : hover{
-    display: block;
-
 }
+.carrinho-itens{
+    display: flex:
+    width: 100%;
+}  
+.conteudo-car{
+    border-radius: 3px;
+    margin: 3% auto;
+    padding: 1%;
+    border: solid 1px #000000;
+    width:  100%;
+}
+.finalizar-compra{
+    box-shadow: rgb(0 0 0 / 25%) 0px 3px 10px -5px;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    padding: 2%;
+    width: 140px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #CDA9EE;
+    cursor: pointer;
+}
+
+
 .icon-car{
+    
     position: absolute;
     top: 0;
     right: 0;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 .icon-car:hover{
+    box-shadow: rgb(0 0 0 / 10%) 0px 3px 10px -5px;
+    width: 45px;
+    height:45px;
     cursor: pointer;
 
 }
@@ -90,7 +128,6 @@ header ul li{
 .container-produtos{
    
     width: 300px;
-    
     display: flex;
     margin: 5%;
     
@@ -117,31 +154,57 @@ header ul li{
     margin: 20px;
     
 }
+
 .nome_produto, .descricao_produto{
     font-size: 20px;
     font-weight: bolder;
 }
+.preco-e-tamanho {
+    margin: 2%;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
 
+}
+.preco_produto{
+    width: 50%;
+}
+.tamanho{
+   width: 50% ;  
+}
 
 
 @media (max-width: 600px){
+    header{
+        display: flex;
+        text-align: center;
+        align-items: center
+        justify: center;
+    }
     header h1{
-        margin-left: 10%;
+        width: 100%:
+        margin: 30%;
         
     }
     header ul{
+        width: 0;
         position: absolute;
         top: 0;
         right: 0;
         margin-right: 5%;
     }
     header ul li{
-    
+        width: 0;
         font-size: 20px;
         margin: 10px;
         display: block;
     }
+    .container{
+        position:sticky ;
+    }
     .container-banner{
+         
         position: absolute;
         display: none;
         height: 0;
@@ -166,6 +229,14 @@ header ul li{
         background-color: #CDA9EE;
         
     }
-    
+    .menu-item{
+        display: none;
+    }
+    .menu-ico{
+        width: 40px;
+        width: 40px;
+        height: 40px;
+        display: block;
+    }
 
 }
